@@ -1,0 +1,16 @@
+%h1
+  Name:
+  = @patient.firstName 
+  
+  = @patient.lastName
+  %br
+%h3 List of meds
+= link_to "New med", new_hospital_patient_med_path(@hospital, @patient), remote: true
+%ul
+  - @patient.meds.each do |med|
+    %li{class: "med-#{med.id}"}
+      = med.name
+      |
+      = med.direction
+      |
+      = link_to "Delete", 'javascript:void(0);', class: "delete-med", med_id: med.id

@@ -21,12 +21,11 @@ ActiveRecord::Schema.define(version: 20150216173556) do
   end
 
   create_table "meds", force: :cascade do |t|
-    t.string   "name",        limit: 255
-    t.text     "direction",   limit: 65535
-    t.integer  "patient_id",  limit: 4
-    t.integer  "hospital_id", limit: 4
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.string   "name",       limit: 255
+    t.text     "direction",  limit: 65535
+    t.integer  "patient_id", limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "patients", force: :cascade do |t|

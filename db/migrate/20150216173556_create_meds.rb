@@ -4,7 +4,6 @@ class CreateMeds < ActiveRecord::Migration
       t.string :name
       t.text :direction
       t.integer :patient_id
-      t.integer :hospital_id
       t.timestamps null: false
     end
   end
