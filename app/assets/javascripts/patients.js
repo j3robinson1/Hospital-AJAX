@@ -16,7 +16,7 @@ $(document).on('click', '.create-patient', function(){
 })
 
 $(document).on("click", ".delete-patient", function() {
-  var hospital_id = $(this).parent().attr('id');
+  var hospital_id = window.location.pathname.split('/')[2];
   var patient_id = $(this).attr("patient_id");
   $.ajax({
     type: 'DELETE',
