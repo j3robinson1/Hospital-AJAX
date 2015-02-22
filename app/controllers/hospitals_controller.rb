@@ -1,6 +1,10 @@
 class HospitalsController < ApplicationController
   def index
-    @hospitals = Hospital.all
+    if !params[:search].blank?
+      @hospitals = Hospital.where("name LIKE ?", "%#{params[:search]}%")
+    else
+      @hospitals = Hospital.paginate(:page => params[:page], :per_page => 5)
+    end
     respond_to do |format|
       format.js
       format.html

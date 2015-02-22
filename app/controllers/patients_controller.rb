@@ -1,7 +1,11 @@
 class PatientsController < ApplicationController
   def index
     set_hospital
-    @patients = Patient.all
+    if !params[:search].blank?
+      @patients = Patient.where("firstName LIKE ?", "%#{params[:search]}%")
+    else
+      @patients = Patient.paginate(:page => params[:page], :per_page => 5)
+    end
     respond_to do |format|
       format.js
       format.html

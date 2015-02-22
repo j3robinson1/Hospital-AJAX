@@ -1,4 +1,10 @@
 %h3 List of hospitals
+= form_tag hospitals_path, method: :get, class: "form-search", role: "search" do
+  .input-group
+    =text_field_tag 'search', params[:search], class: "form-control", id: "srch-term", placeholder: "Search"
+    .input-group-btn
+      %button.btn.btn-default{:style => "width:40px;"}
+        %span.glyphicon.glyphicon-search
 = link_to "New hospital", new_hospital_path, remote: true
 %ul
   - @hospitals.each do |hospital|
@@ -10,3 +16,6 @@
       = link_to "Hospitals Patients", hospital_patients_path(hospital)
       |
       = link_to "Delete", 'javascript:void(0);', class: "delete-hospital", hospital_id: hospital.id
+  %br
+  -if @hospitals = Hospital.paginate(:page => params[:page], :per_page => 5)
+    = will_paginate @hospital
