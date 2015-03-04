@@ -5,7 +5,6 @@
   = @patient.lastName
   %br
 %h3 List of meds
-= link_to "New med", new_hospital_patient_med_path(@hospital, @patient), remote: true
 %ul
   - @patient.meds.each do |med|
     %li{class: "med-#{med.id}"}

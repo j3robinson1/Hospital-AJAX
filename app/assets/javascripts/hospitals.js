@@ -11,7 +11,9 @@ $(document).on('click', '.create-hospital', function(){
   })
   location.reload();
 })
-
+$(document).on('click', '.escape', function(){
+  location.reload()
+  };
 $(document).on("click", ".delete-hospital", function() {
   console.log("asdf");
   var hospital_id = $(this).attr("hospital_id");

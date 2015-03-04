@@ -14,7 +14,9 @@ $(document).on('click', '.create-patient', function(){
   })
   location.reload();
 })
-
+$(document).on('click', '.escape', function(){
+  location.reload()
+  };
 $(document).on("click", ".delete-patient", function() {
   var hospital_id = window.location.pathname.split('/')[2];
   var patient_id = $(this).attr("patient_id");

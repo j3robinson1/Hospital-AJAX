@@ -5,7 +5,6 @@
     .input-group-btn
       %button.btn.btn-default{:style => "width:40px;"}
         %span.glyphicon.glyphicon-search
-= link_to "New hospital", new_hospital_path, remote: true
 %ul
   - @hospitals.each do |hospital|
     %li{class: "hospital-#{hospital.id}"}
