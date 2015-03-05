@@ -11,11 +11,11 @@ $(document).on('click', '.create-med', function(){
     dataType: 'script',
     data: {med: med}
   })
-  location.reload();
+  location.reload() //horray bad practice
 })
 $(document).on('click', '.escape', function(){
   location.reload()
-  };
+});
 $(document).on("click", ".delete-med", function() {
   var hospital_id = window.location.pathname.split('/')[2];
   var patient_id = window.location.pathname.split('/')[4];

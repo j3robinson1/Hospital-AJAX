@@ -1,7 +1,11 @@
-= link_to root_path do
-  Home
+.btn.btn-info
+  %span.glyphicon.glyphicon-th-list
+.btn.btn-default
+  = link_to root_path do
+    Home
 %br
-= link_to hospitals_path do
-  Hospitals
+.btn.btn-default
+  = link_to hospitals_path do
+    Hospitals
 %br
 = render 'sidebar'

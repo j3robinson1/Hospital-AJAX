@@ -1,7 +1,10 @@
-= link_to hospital_patients_path(@hospital) do
-  Patients
+.btn.btn-default
+  = link_to hospital_patients_path(@hospital) do
+    Patients
 %br
-= link_to hospital_patient_meds_path(@hospital, @patient) do
-  Meds
+.btn.btn-default
+  = link_to hospital_patient_meds_path(@hospital, @patient) do
+    Meds
 %br
-= link_to "New med", new_hospital_patient_med_path(@hospital, @patient), remote: true
+.btn.btn-default
+  = link_to "New med", new_hospital_patient_med_path(@hospital, @patient), remote: true

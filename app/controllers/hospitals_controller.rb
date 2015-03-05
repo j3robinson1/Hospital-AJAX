@@ -20,11 +20,9 @@ class HospitalsController < ApplicationController
 
   def create
     @hospital = Hospital.create hospital_params
-    @hospitals = Hospital.all
     respond_to do |format|
       format.js
     end
-    redirect_to hospitals_path
   end
 
   def destroy
