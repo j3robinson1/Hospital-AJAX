@@ -1,8 +1,19 @@
 .col-md-3 {
+  z-index: 2;
   left: 0;
-  background-color: blue;
+  background-color: #344845;
+  height: 100;
 }
-.btn-default {
+.col-md-9 {
+  right: 0;
+  left: 50;
+  z-index: 2;
+}
+.btn.btn-default {
   text-align: center;
   display: block;
+}
+.background {
+  position: fixed;
+  z-index: 1;
 }
