@@ -44,6 +44,10 @@ private
     params.require(:patient).permit(
       :firstName,
       :lastName,
+      :dob,
+      :symptoms,
+      :gender,
+      :bloodtype,
       :hospital_id
     )
   end  
