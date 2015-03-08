@@ -9,7 +9,7 @@
 %h3 List of meds
 %ul
   - @patient.meds.each do |med|
-    %li{class: "med-#{med.id}"}
+    %li.btn.btn-primary{class: "med-#{med.id}"}
       = med.name
       |
       = med.direction
