@@ -9,14 +9,13 @@
         %span.glyphicon.glyphicon-search
 %ul
   - @hospitals.each do |hospital|
-    %li{class: "hospital-#{hospital.id}"}
-      = hospital.name
-      |
-      = hospital.location
-      |
-      = link_to "Hospitals Patients", hospital_patients_path(hospital)
+    %li.btn.btn-primary{class: "hospital-#{hospital.id}"}
+      = link_to hospital_patients_path(hospital) do 
+        = hospital.name
+        |
+        = hospital.location
       |
       = link_to "Delete", 'javascript:void(0);', class: "delete-hospital", hospital_id: hospital.id
-  %br
+    %br
   -if @hospitals = Hospital.paginate(:page => params[:page], :per_page => 5)
     = will_paginate @hospital
