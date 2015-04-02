@@ -8,6 +8,7 @@
   right: 0;
   left: 50;
   z-index: 2;
+  text-align:center;
 }
 .btn.btn-default {
   text-align: center;
@@ -23,5 +24,8 @@
 }
 .form {
   text-align: center;
+  display: block;
+}
+.spl {
   display: block;
 }
